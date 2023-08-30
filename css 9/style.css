@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+}
+.card{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background-color: #232323;
+    border-radius:20px;
+    overflow:hidden;
+}
+.card::before{
+    position: absolute;
+    content: "";
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-color: #9bdc28;
+    clip-path:circle(150px at 80% 20%);
+    transition: all 0.25s ease-in-out;
+}
+
+.card:hover::before
+{
+    clip-path:circle(300px at 80% -20%);
+
+}
+.card::after{
+    content: "NIKE";
+    position: absolute;
+    top:30%;
+    left:-20%;
+    font-size: 12em;
+    font-style: italic;
+    font-weight: 800;
+    color:rgba(255,255,255,0.04)
+}
+.imgbx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img
+{
+    width: 100%;
+    height: 100%;
+    transform:rotateY(180deg) translateY(0%) rotate(25deg);
+    transition: 0.5s;
+}
+.card:hover img{
+    transform:rotateY(180deg) translateY(-30%) rotate(25deg);
+}
+.card .card-content
+{
+    position: absolute;
+    text-align: center;
+    bottom:0;
+    width: 100%;
+    height: 100px;
+    transition:0.5s ease;
+    z-index:10;
+    
+}
+.card:hover .card-content{
+    height: 210px;
+}
+.card h2{
+    color: white;
+    font-size: 3em;
+}
+.card h3{
+    color:white;
+    font-size:2em;
+}
+
+.card .size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.card .size span{
+    background-color:white;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    margin: 0 5px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+.card .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.card .color span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background: #ff0;
+    margin: 0 5px;
+    border: 2px solid black;
+}
+.card .color span:nth-child(2)
+{
+    background: #9bdc28;
+}
+.card .color span:nth-child(3)
+{
+    background: #03a9f4;
+}
+.card .color span:nth-child(4)
+{
+    background: #e91e63;
+}
+.card .size span:hover{
+    background-color: #9bdc28;
+    cursor: pointer;
+}
+.card .color span:hover {
+transform: scale(1.3);
+transition: all 0.25s ease-in-out;
+}
+.card button{
+    background-color: white;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    padding:10px;
+    margin-top:10px;
+    border: 2px solid black;
+    text-decoration:none;
+    visibility: hidden;
+}
+.card button:hover{
+    background-color: #03a9f4;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.card:hover .size,.card:hover .color,.card:hover button{
+    visibility: visible;
+    transition: all 0s 0.25s ease-in-out;
+}

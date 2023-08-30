@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEFAE0;
+    height: 100vh;
+}
+h1 {
+    font-size: 75px;
+    color:#DDA15E;
+    
+}
+.auto-input{
+    color:#BC6C25;
+}

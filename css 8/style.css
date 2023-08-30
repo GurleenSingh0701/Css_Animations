@@ -1,0 +1,34 @@
+
+*{
+    margin: 0;
+    padding:0 ;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    height: 100vh;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    width: 400px;
+    height: 50vh;
+    border-radius: 5rem;
+    
+}
+.card:hover{
+    background-color: blue;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+.card:hover img{
+    position: absolute;
+    top:50px;
+    pointer-events: none;
+}

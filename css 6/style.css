@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+.container1{
+    background-color:#023047;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+.row{
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   width: 100vw;
+   height: 100vh;
+    padding: 50px;
+    gap:20px;
+}
+.row .card,.row .card .card-body,.row .card .card-body .profile-info
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.row .card
+{
+    width: 300px;
+    height: 400px;
+    box-shadow:0px 00px 0px 4px #FFE299;
+    transform: rotate(30deg);
+}
+.row .card .card-body,.row .card .profile-image,.row .card .card-body img{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+.row .card .profile-image{
+   
+    height: 70%;
+    background-color: #FFB703;
+    width: 100%;
+}
+.row .card .card-body img{
+    top:20px;
+    height:150px;
+    width: 150px;
+    border-radius: 5rem;
+    outline:solid white;
+    border:5px solid blue;
+}
+.row .card .card-body .profile-info{
+    height: 60%;
+    text-align: center;
+}
+.card:hover .profile-image {background-color: #E07800;}
+.card:hover{
+    background-color: #E07800;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);font-weight: 400;
+    
+}
+svg{
+    fill:white;
+}
+.card:hover svg{
+    fill:#E07800;
+    transition: all ease-in-out;
+}
+.carousel-control-prev-icon,.carousel-control-next-icon{
+   background-color: #E07800;
+  
+}
